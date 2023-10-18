@@ -1,15 +1,7 @@
-package justMath;
-
 import java.util.ArrayList;
 
 //Diophantine Linear Equation in Two Variables Solutions
-public class MyAlgoDLEITVS {
-
-	public static void main(String[] args) {
-		
-		DLEITVS(7,-3,2);
-		
-	}
+public class AlgoDLEITVS {
 	
 	/**
 	 * Format: ay = bx + c <br><br>
