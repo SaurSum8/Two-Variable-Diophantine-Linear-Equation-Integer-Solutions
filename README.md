@@ -10,7 +10,7 @@ ay = bx + c (a,b,c are constants of type int)
 
 Call:
 
-DLEITVS(a, b, c)
+`DLEITVS(a, b, c)`
 
 > **Returns the solution equation in form:**
 
