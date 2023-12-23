@@ -6,7 +6,7 @@ Program finds a general formula, which gives all integer solutions to a two vari
 
 To find all integer solutions to y and x of an equation:
 
-ay = bx + c (a,b,c are constants of type int)
+ay = bx + c (a,b,c are constants of type int and are coprime)
 
 Call:
 
