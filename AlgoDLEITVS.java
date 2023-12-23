@@ -1,14 +1,23 @@
+package justMath;
+
 import java.util.ArrayList;
 
 //Diophantine Linear Equation in Two Variables Solutions
 public class AlgoDLEITVS {
+
+	public static void main(String[] args) {
+		
+		DLEITVS(3,-2,5); //Example: 3y = -2y + 5
+		
+	}
 	
 	/**
 	 * Format: ay = bx + c <br><br>
+	 * Make Sure a, b, c Are Co-prime <br><br>
 	 * Returns: int[][] r :<br><br>
 	 * x = r[0][0] * k + r[0][1] <br>
 	 * y = r[1][0] * k + r[1][1] <br>
-	 * for all integers, k 
+	 * for all integers, k
 	 * */
 	public static int[][] DLEITVS(int a, int b, int c) {
 		
@@ -38,7 +47,7 @@ public class AlgoDLEITVS {
 			if(vals[0] == 1)
 				break;
 			
-			int tempStore = vals[2];
+			final int tempStore = vals[2];
 			vals[3] = Math.floorMod(-vals[3], vals[0]);
 			vals[1] = Math.floorDiv(vals[0], vals[2]);
 			vals[2] = Math.floorMod(vals[0], vals[2]);
@@ -54,7 +63,7 @@ public class AlgoDLEITVS {
 		int p = eqArr[eqArr.length - 1][1];
 		int q = eqArr[eqArr.length - 1][3];
 		
-		for(int i = eqArr.length - 2; i >= 0; i--) {
+		for(int i = eqArr.length - 2; i >= 0; --i) {
 			
 			if(i == 0) {
 				res[0][0] = p; 
@@ -62,7 +71,7 @@ public class AlgoDLEITVS {
 			}
 			
 			p = (eqArr[i][2] * p / eqArr[i][0]) + (eqArr[i][1] * p);
-			q = (eqArr[i][2] * q + eqArr[i][3]) / eqArr[i][0];
+			q = (eqArr[i][1] * q) + ((eqArr[i][2] * q + eqArr[i][3]) / eqArr[i][0]);
 		
 		}
 		
